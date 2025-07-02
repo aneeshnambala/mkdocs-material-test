@@ -1,0 +1,41 @@
+site_name: Engineering Documentation
+
+theme:
+  name: material
+  features:
+    - code.highlight
+    - content.versioning
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+extra_javascript:
+  - https://unpkg.com/mermaid@10.6.0/dist/mermaid.min.js
+
+plugins:
+  - search
+
+nav:
+  - Overview: index.md
+  - Architecture: architecture.md
+  - Installation: installation.md
+  - API Reference: api_reference.md
+  - FAQs: faqs.md
+  - Contributing: contributing.md
+  - Changelog: changelog.md
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - admonition
+  - toc:
+      permalink: true
